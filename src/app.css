@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary-dark: #3F2A56;
+    --primary-accent: #E0457B;
+    --secondary-warm: #ED9B33;
+    --secondary-cool: #5461C8;
+    --tertiary-light: #7A93DC;
+    --tertiary-dark: #051C2C;
+
+    --dark-shade: #341658;
+    --light-shade: #592c84;
+
+    --car-dark: #0a0813;
+    --car-dash: #0c0c18;
+
+    --darker-neon: #102932;
+    --dark-neon: #498099;
+    --light-neon: #30C0B7;
+    --hover-neon: #3cf1e5;
+
+    --dark-accent: #671f39;
+}
+
+@font-face {
+    font-family: 'outrun';
+    src: url('/fonts/outrun.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'natalie';
+    src: url('/fonts/natalie.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1 {
+    font-family: 'outrun';
+}
+
+p {
+    font-family: 'natalie';
+    letter-spacing: 4px;
+    font-size: 12px;
+    line-height: 21px;
+}
+
+body {
+    filter: url(#grain);
+    opacity: 0.95;
+}
+
+.background {
+    background: rgb(5,28,44);
+    background: linear-gradient(0deg, rgba(5,28,44,1) 0%, rgba(63,42,86,1) 100%);
+    width: 100dvw;
+    height: 100dvh;
+}
+
+.x-line {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: start;
+    overflow: hidden;
+    padding: 5px;
+    gap: 7px;
+}
+
+.city-light {
+    background: rgb(5,28,44);
+    background: linear-gradient(0deg, rgba(5,28,44,1) 0%, rgba(52, 22, 88, 0) 100%); 
+}
+
+.persona-wrap {
+    clip-path: polygon(
+        0% 0%,
+        85% 0%,
+        100% 15%,
+        100% 100%,
+        15% 100%,
+        0% 85%
+    );
+}
+
+.data-wrap {
+    clip-path: polygon(0% 0%, 95% 0%, 100% 15%, 100% 100%, 0% 100%, 0% 100%);
+}
+
+.terminal-btn:hover,
+.terminal-btn:focus {
+    box-shadow: inset 0 0 0 2em var(--darker-neon);
+    color: var(--light-neon);
+}
+
+.transition-class {
+    transition: all 350ms;
+}
+
+@keyframes blink {
+    0% {
+        color: var(--light-neon);
+    } 50% {
+        color: var(--dark-neon);
+    } 100% {
+        color: var(--light-neon);
+    }
+}
+
+@keyframes wheel {
+    0% {
+        transform: rotate(-5deg);
+    } 50% {
+        transform: rotate(5deg);
+    } 100% {
+        transform: rotate(-5deg);
+    }
+}
+
+@keyframes cells {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px; 
+}
+    
+::-webkit-scrollbar-thumb {
+    background-color: var(--light-neon); 
+    border-radius: 10px;
+}
+    
