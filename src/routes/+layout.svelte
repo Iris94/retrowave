@@ -4,36 +4,6 @@
 	import Skyline from "../components/Skyline/Skyline.svelte";
 	import Road from "../components/Road/Road.svelte";
 	import Mobilescreen from "../components/Widgets/Mobilescreen.svelte";
-
-	import { onMount } from "svelte";
-
-	function enterFullscreen() {
-		const docEl = document.documentElement;
-
-		if (docEl.requestFullscreen) {
-			docEl.requestFullscreen();
-		} else if (docEl.mozRequestFullScreen) {
-			// Firefox
-			docEl.mozRequestFullScreen();
-		} else if (docEl.webkitRequestFullscreen) {
-			// Chrome, Safari, and Opera
-			docEl.webkitRequestFullscreen();
-		} else if (docEl.msRequestFullscreen) {
-			// IE/Edge
-			docEl.msRequestFullscreen();
-		}
-	}
-
-	function handleUserInteraction() {
-		enterFullscreen();
-		document.removeEventListener("click", handleUserInteraction);
-		document.removeEventListener("touchstart", handleUserInteraction);
-	}
-
-	onMount(() => {
-		document.addEventListener("click", handleUserInteraction);
-		document.addEventListener("touchstart", handleUserInteraction);
-	});
 </script>
 
 <div class="overflow-hidden app">
