@@ -1,6 +1,7 @@
 <script>
     import { fade } from "svelte/transition";
     import { goto } from "$app/navigation";
+    import Icon from "@iconify/svelte";
     import { personaNeonPage } from "../../Store/settings";
     import { playClickSound } from "$lib/data/sounds.js";
 
@@ -24,6 +25,14 @@
 >
     <div class="car-left-rearview"></div>
     <div class="car-right-rearview"></div>
+    <div class="car-navigation">
+        <div class="flex flex-row justify-center">
+            <Icon icon="mingcute:arrows-up-fill" width="1.5vw" />
+            <Icon icon="mingcute:arrows-up-fill" width="1.5vw" />
+            <Icon icon="mingcute:arrows-up-fill" width="1.5vw" />
+        </div>
+        <p>click to drive</p>
+    </div>
 
     <div class="car-top">
         <div class="car-window">
@@ -100,6 +109,17 @@
         bottom: -15%;
         left: 87%;
         z-index: 100;
+    }
+
+    .car-navigation {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 50;
+        top: 125%;
+        color: var(--light-neon);
+        font-weight: 600;
+        animation: blink 1s infinite;
     }
 
     .car-top {
