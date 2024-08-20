@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-    <title>Neon City</title>
+    <title>Code City</title>
 </svelte:head>
 
 <Persona />
