@@ -30,7 +30,7 @@
     </div>
 {/each}
 
-<hr class="w-full mt-5 mb-5" />
+<hr class="w-full my-1 lg:my-5" />
 
 {#each idError as error}
     <div class="flex {error.class}">
@@ -39,7 +39,7 @@
     </div>
 {/each}
 
-<hr class="w-full mt-5 mb-5" />
+<hr class="w-full my-1 lg:my-5" />
 
 {#each idSocial as social}
     <div class="flex">

@@ -10,7 +10,7 @@
         <div transition:fly={{ y: -500, duration: 2000 }}
             class="absolute flex flex-col items-center w-full h-1/2 top-2">
             <div class="w-1 h-1/3 bg-car-dark"></div>
-            <div class="w-1/5 h-2/3 rearview-mirror"></div>
+            <div class="w-1/5 h-1/2 md:h-3/4 lg:h-2/3 rearview-mirror"></div>
         </div>
     {/if}
 </div>

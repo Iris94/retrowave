@@ -25,4 +25,10 @@
             perspective: 120px;
         }
     }
+
+    @media (max-width: 699px) {
+        .net-grid-wrapper {
+            perspective: 52px;
+        }
+    }
 </style>

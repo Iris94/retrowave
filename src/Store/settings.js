@@ -22,6 +22,8 @@ export const asyncDriverText = writable(false);
 export const asyncHackText = writable(false);
 export const asyncDefaultText = writable(false);
 
+export const isMobile = writable(false);
+
 export const linkedin = writable('https://linkedin.com/in/iris94');
 export const github = writable('https://github.com/Iris94');
 export const instagram = writable('https://www.instagram.com/mirza.iris/')

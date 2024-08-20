@@ -13,7 +13,7 @@
 </div>
 {/each}
 
-<hr class="w-full mt-5 mb-5" />
+<hr class="w-full my-1 lg:my-5" />
 
 <p>
     When I'm not coding, I’m cruising through the night with synthwave on blast. I love cooking up both meals and ideas, diving into software books, or just chilling with friends. Coding is my passion, but life’s all about balance.

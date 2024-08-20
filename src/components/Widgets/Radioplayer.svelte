@@ -16,7 +16,7 @@
 
     onMount(() => {
         audioElement = document.querySelector('#audioPlayer');
-        audioElement.volume = 0.20;
+        audioElement.volume = 0.10;
         updateAudioPlayback();
 
         unsubscribeRadio = radio.subscribe(() => {

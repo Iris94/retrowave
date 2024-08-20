@@ -4,9 +4,9 @@
 </script>
 
 {#each projects as item}
-    <a href={item.link} target="_blank" class="w-3/5 p-px h-fit data-wrap bg-light-neon">
+    <a href={item.link} target="_blank" class="w-4/5 p-px lg:w-3/5 h-fit data-wrap bg-light-neon">
         <div
-            class="relative flex w-full h-full gap-5 data-wrap bg-darker-neon project-btn transition-class text-light-neon"
+            class="relative flex w-full h-full gap-2 lg:gap-5 data-wrap bg-darker-neon project-btn transition-class text-light-neon"
         >
             <div class="flex flex-col w-2/5">
                 <div class="flex items-center justify-center w-full p-2 h-1/6">
@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="flex flex-col items-center justify-center w-3/5 h-full">
-                <p class="w-full h-full p-2">
+                <p class="w-full h-full p-3 lg:p-6">
                     {item.description}
                 </p>
                 <div

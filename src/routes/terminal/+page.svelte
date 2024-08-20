@@ -40,7 +40,7 @@
             <div class="flex items-center justify-center w-1/3">
                 <button
                     on:click={backToDriver}
-                    class="px-10 py-2 font-bold bg-light-neon text-darker-neon transition-class terminal-btn"
+                    class="py-1 text-sm font-bold px-7 md:text-base lg:py-2 lg:px-10 bg-light-neon text-darker-neon transition-class terminal-btn"
                     >Back</button
                 >
             </div>
@@ -53,7 +53,7 @@
                         terminalDefault.set(true);
                         playClickSound();
                     }}
-                    class="text-2xl hover:text-hover-neon">Projects</button
+                    class="lg:text-2xl hover:text-hover-neon">Projects</button
                 >
             </div>
             <div
@@ -65,7 +65,7 @@
                         terminalDefault.set(false);
                         playClickSound();
                     }}
-                    class="text-2xl hover:text-hover-neon">Contact</button
+                    class="lg:text-2xl hover:text-hover-neon">Contact</button
                 >
             </div>
         </div>
@@ -75,7 +75,7 @@
         />
         <div
             transition:fade={{ duration: 500 }}
-            class="flex flex-col w-4/5 gap-10 my-12 overflow-y-scroll scrol h-4/5"
+            class="flex flex-col w-4/5 gap-5 my-5 overflow-y-scroll lg:gap-10 lg:my-12 scrol h-4/5"
         >
             {#if $terminalDefault}
                 <Projects />

@@ -21,4 +21,11 @@
                     0 0 16vw 2vw var(--primary-accent),
                     0 0 19vw 3vw var(--dark-shade);
     }
+
+    @media only screen and (max-width: 990px) {
+        .sun-element {
+            width: 7.5%;
+            height: 45%;
+        }
+    }
 </style>

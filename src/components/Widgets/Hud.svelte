@@ -29,10 +29,10 @@
     <Radioplayer />
     <Voiceplayer />
     <div
-        class="absolute bottom-0 right-0 z-50 flex flex-col items-end justify-around w-1/3 mt-3 h-1/6"
+        class="absolute bottom-0 right-0 z-50 flex flex-col items-end justify-end mt-1 lg:w-1/3 lg:mt-3 h-1/6"
     >
         <button
-            class="flex items-center gap-5 pr-3 cursor-pointer h-1/3"
+            class="flex items-center gap-2 pr-3 cursor-pointer lg:gap-5 h-1/3"
             class:text-light-neon={$voice}
             class:text-primary-accent={!$voice}
             on:click={() => ($voice = !$voice)}
@@ -42,18 +42,18 @@
             {#if $voice}
                 <Icon
                     icon="game-icons:sound-on"
-                    class="relative lg:text-3xl bottom-1"
+                    class="relative lg:text-3xl lg:bottom-1"
                 />
             {:else}
                 <Icon
                     icon="game-icons:sound-off"
-                    class="relative lg:text-3xl bottom-1"
+                    class="relative lg:text-3xl lg:bottom-1"
                 />
             {/if}
         </button>
 
         <button
-            class="flex items-center w-full gap-6 pr-3 cursor-pointer h-1/3 lg:w-fit bg-tertiary-dark"
+            class="flex items-center w-full gap-5 pr-3 cursor-pointer lg:mr-0 lg:gap-6 h-1/3 lg:w-fit bg-tertiary-dark"
             class:text-light-neon={$radio}
             class:bg-transparent={!$radio}
             on:click={() => ($radio = !$radio)}
@@ -65,7 +65,7 @@
                     <span
                         class:text-transparent={!$radio}
                         class="flex mr-2 font-bold text-primary-accent"
-                        ><h1>{song}</h1></span
+                        ><h6>{song}</h6></span
                     >
                     <span class:text-transparent={!$radio}>|</span>
                     <span

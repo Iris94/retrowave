@@ -17,14 +17,17 @@
     >
         <div class="flex flex-col items-center w-2/3 lg:w-1/2 lg:h-2/3 h-4/5">
             <div class="flex items-center justify-center w-full h-2/5">
-                <h1 class="text-5xl text-white">
+                <h1 class="text-white md:text-2xl lg:text-5xl">
                     Welcome To <span class="text-primary-accent">Code City</span
                     >
                 </h1>
             </div>
-            <button on:click={neonRide} class="w-1/2 p-3 font-bold text-white bg-primary-accent">
+            <button on:click={neonRide} class="w-1/3 p-px mb-10 text-sm font-bold text-white lg:mb-20 md:text-base md:p-2 lg:w-1/2 lg:p-3 bg-primary-accent">
                 Take a drive
             </button>
+            <p class="text-center text-white lg:text-base">
+                This website starts with music and sound turned ON. To turn them off, simply click on 'Radio' or 'Voice' in the bottom left corner.
+            </p>
         </div>
     </div>
 {/if}

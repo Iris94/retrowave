@@ -6,27 +6,49 @@
     let audioElement;
     let unsubscribeVoice;
     let unsubscribeMute;
+    let playPromise;
 
-    function updateAudioPlayback() {
+    async function updateAudioPlayback() {
         if (audioElement) {
-            if (get(activeVoiceAudio)) {
-                audioElement.src = get(activeVoiceAudio); 
-                audioElement.play().catch(error => console.error('Playback error:', error)); 
+            if (playPromise) {
+                try {
+                    await playPromise;
+                    audioElement.pause(); 
+                } catch (error) {
+                    console.warn("Previous play request was interrupted:", error);
+                }
+            }
+
+            const newSource = get(activeVoiceAudio);
+
+            if (newSource) {
+                if (audioElement.src !== newSource) {
+                    audioElement.src = newSource;
+                }
+
+                try {
+                    playPromise = audioElement.play();
+                    await playPromise;
+                } catch (error) {
+                    console.error("Audio playback failed:", error);
+                } finally {
+                    playPromise = null; 
+                }
             } else {
-                audioElement.pause(); 
+                audioElement.pause();
             }
         }
     }
 
     function updateMuteState() {
         if (audioElement) {
-            audioElement.muted = !get(voice); 
+            audioElement.muted = !get(voice);
         }
     }
 
     onMount(() => {
         audioElement = document.querySelector('#voicePlayer');
-        audioElement.volume = 0.50;
+        audioElement.volume = 0.45;
 
         unsubscribeVoice = activeVoiceAudio.subscribe(() => {
             updateAudioPlayback();
@@ -37,16 +59,13 @@
         });
 
         updateAudioPlayback();
-        updateMuteState(); 
+        updateMuteState();
     });
 
     onDestroy(() => {
-        if (unsubscribeVoice) {
-            unsubscribeVoice();
-        }
-        if (unsubscribeMute) {
-            unsubscribeMute();
-        }
+        if (unsubscribeVoice) unsubscribeVoice();
+        if (unsubscribeMute) unsubscribeMute();
+
         if (audioElement) {
             audioElement.pause();
             audioElement = null;

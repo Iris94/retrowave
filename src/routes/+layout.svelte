@@ -3,11 +3,13 @@
 	import Hud from "../components/Widgets/Hud.svelte";
 	import Skyline from "../components/Skyline/Skyline.svelte";
 	import Road from "../components/Road/Road.svelte";
+	import Mobilescreen from "../components/Widgets/Mobilescreen.svelte";
 </script>
 
 <div class="overflow-hidden app">
 	<header>
 		<Hud />
+		<Mobilescreen />
 	</header>
 
 	<main class="flex-col background">

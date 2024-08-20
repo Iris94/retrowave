@@ -13,4 +13,11 @@
         width: 2px;
         height: 2px;
     }
+
+    @media only screen and (max-width: 990px) {
+        .window {
+            width: 1px;
+            height: 1px;
+        }
+    }
 </style>

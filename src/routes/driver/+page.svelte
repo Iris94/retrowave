@@ -51,8 +51,8 @@
     <Persona />
 
     <button on:click={backToPage}
-        class="absolute p-1 left-2 bottom-72">
-        <Icon icon="fluent-emoji-high-contrast:back-arrow" width="3vw" class="text-light-neon hover:text-hover-neon" />
+        class="absolute p-1 left-2 bottom-40 lg:bottom-72">
+        <Icon icon="fluent-emoji-high-contrast:back-arrow" width="3.5vw" class="text-light-neon hover:text-hover-neon" />
     </button>
     
     {#if $techStack} 

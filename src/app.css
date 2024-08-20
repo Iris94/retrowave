@@ -40,7 +40,7 @@
     font-display: swap;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
     font-family: 'outrun';
 }
 
@@ -49,6 +49,39 @@ p {
     letter-spacing: 4px;
     font-size: 12px;
     line-height: 21px;
+}
+
+@media only screen and (max-width: 990px) {
+    p {
+        letter-spacing: 2px;
+        font-size: 9px;
+        line-height: 15px;
+    }
+
+    a {
+        font-size: 9px;
+    }
+
+    h1 {
+        font-size: 21px;
+    }
+    
+}
+
+@media only screen and (max-width: 690px) {
+    p {
+        letter-spacing: 1.5px;
+        font-size: 7px;
+        line-height: 12px;
+    }
+
+    a {
+        font-size: 7px;
+    }
+    
+    h1 {
+        font-size: 18px;
+    }
 }
 
 body {

@@ -31,7 +31,7 @@
     });
 </script>
 
-<div class="flex w-full gap-3 h-1/6">
+<div class="flex w-full gap-1 lg:gap-3 h-1/6">
     <div class="w-1/4 h-full p-px persona-wrap bg-light-neon">
         <img
             src={persona}
@@ -41,7 +41,7 @@
     </div>
 
     <div class="w-3/4 p-px h-fit data-wrap bg-light-neon">
-        <div class="w-full h-full p-3 bg-darker-neon data-wrap">
+        <div class="w-full h-full p-2 lg:p-3 bg-darker-neon data-wrap">
             <p class="text-light-neon">
                 {$activeVoiceText}
             </p>

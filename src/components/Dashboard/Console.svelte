@@ -7,6 +7,12 @@
     let terminalTransition = false;
 
     function prepOpenTerminal() {
+        const audioElement = document.querySelector("#voicePlayer");
+
+        if (audioElement && !audioElement.paused) {
+            audioElement.pause();
+            audioElement.currentTime = 0;
+        }
         playClickSound();
         terminalTransition = !terminalTransition;
     }
@@ -20,7 +26,7 @@
     <div class="relative flex items-center justify-center w-full h-1/2">
         <button
             on:click={prepOpenTerminal}
-            class="w-3/4 h-full text-xl cursor-pointer lcd-screen text-light-neon"
+            class="w-3/4 h-full cursor-pointer sm:text-xs lg:text-xl lcd-screen text-light-neon"
         >
             Open Projects
         </button>
@@ -28,7 +34,9 @@
         <Infiltration />
     </div>
 
-    <div class="flex flex-col items-center justify-start w-full gap-5 h-1/2">
+    <div
+        class="flex flex-col items-center justify-start w-full gap-1 lg:gap-5 h-1/2"
+    >
         <div class="flex w-1/2 gap-1 h-1/5">
             <div class="w-1/5 h-full bg-primary-accent red-shade"></div>
             <div class="w-1/5 h-full bg-primary-accent red-shade"></div>
@@ -37,7 +45,7 @@
             <div class="w-1/5 h-full bg-primary-accent red-shade"></div>
         </div>
 
-        <div class="flex w-1/2 gap-1 p-3 h-2/5">
+        <div class="flex w-1/2 gap-1 p-1 lg:p-3 h-2/5">
             <div class="w-1/5 h-full bg-secondary-warm orange-shade"></div>
             <div class="w-1/5 h-full bg-secondary-warm orange-shade"></div>
             <div class="w-1/5 h-full bg-secondary-warm orange-shade"></div>

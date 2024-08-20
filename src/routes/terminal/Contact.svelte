@@ -10,28 +10,38 @@
             })
             .then(
                 () => {
-                    emailSent.set(true)
+                    emailSent.set(true);
                 },
                 () => {
-                    emailFailed.set(true)
+                    emailFailed.set(true);
                 },
             );
     };
 </script>
 
 {#if !$emailSent && !$emailFailed}
-    <div class="self-center w-1/2 p-px persona-wrap bg-light-neon">
+    <div class="self-center w-2/3 p-px lg:w-1/2 persona-wrap bg-light-neon">
         <form
             on:submit|preventDefault={sendEmail}
-            class="flex flex-col gap-2 p-10 persona-wrap bg-darker-neon text-light-neon"
+            class="flex flex-col gap-2 p-5 lg:p-10 persona-wrap bg-darker-neon text-light-neon"
         >
             <label class="mb-px" for="name">Name:</label>
-            <input class="contact-input" name="name" type="text" required minlength="1" />
+            <input
+                class="contact-input"
+                name="name"
+                type="text"
+                required
+                minlength="1"
+            />
             <label class="mb-px" for="email">Email:</label>
             <input class="contact-input" name="email" type="email" required />
             <label class="mb-px" for="name">Message:</label>
-            <textarea class="h-28 contact-input" name="message" required minlength="15"></textarea><br
-            /><br />
+            <textarea
+                class="mb-5 lg:mb-12 h-28 contact-input"
+                name="message"
+                required
+                minlength="15"
+            ></textarea>
             <input
                 class="self-center px-10 py-2 font-bold cursor-pointer w-fit bg-light-neon text-darker-neon transition-class terminal-btn"
                 type="submit"
@@ -71,5 +81,13 @@
         background-color: transparent;
         outline: 1px solid var(--light-neon);
         padding: 5px;
+    }
+
+    @media only screen and (max-width: 990px) {
+        .contact-input {
+            width: 85%;
+            outline: 1px solid var(--light-neon);
+            padding: 3px;
+        }
     }
 </style>

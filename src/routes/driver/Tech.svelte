@@ -15,7 +15,7 @@
 
     {#if techstackShow && $techStack}
         <div transition:fade={{ duration: 500 }}
-            class="flex flex-wrap items-center justify-center w-full h-full gap-20"
+            class="flex flex-wrap items-center justify-center w-full h-full gap-2 lg:gap-20"
         >
             {#each techstack as tech}
                 <div class="flex flex-col items-center justify-center gap-2 p-4 rounded-lg w-fit h-fit text-secondary-warm"

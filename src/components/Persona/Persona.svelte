@@ -7,7 +7,7 @@
 
 {#if $hud}
     <div
-        class="absolute z-50 flex flex-col w-2/5 m-5 h-fit"
+        class="absolute z-50 flex flex-col w-5/12 m-2 md:w-2/5 lg:m-5 h-fit"
         transition:fade={{ duration: 250 }}
     >
         {#if !$techStack}

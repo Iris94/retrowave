@@ -99,6 +99,13 @@
         box-shadow: inset 0 0 0.5vw 0.15vw var(--light-neon);
     }
 
+    @media only screen and (max-width: 990px) {
+        .clock {
+            width: 15%;
+            height: 80%
+        }
+    }
+
     .wheel {
         border-radius: 50%;
         width: 25vw;

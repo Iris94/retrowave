@@ -76,6 +76,12 @@
         z-index: 45;
     }
 
+    @media only screen and (max-width: 690px) {
+        .car-wrapper {
+            bottom: 17%;
+        }
+    }
+
     .car-left-rearview {
         position: relative;
         width: 10%;
@@ -173,6 +179,12 @@
         top: 70%;
     }
 
+    @media only screen and (max-width: 990px) {
+        .car-plate {
+            font-size: 5px
+        }
+    }
+
     .car-lights {
         width: 7%;
         height: 15%;
@@ -182,6 +194,15 @@
             0 0 0.1vw 0.2vw #eec3ab,
             0 0 0.2vw 0.3vw #e9566c,
             0 0 0.3vw 0.4vw #a81a42;
+    }
+
+    @media only screen and (max-width: 990px) {
+        .car-lights {
+            box-shadow:
+                0 0 1px 2px #eec3ab,
+                0 0 2px 3px #e9566c,
+                0 0 3px 4px #a81a42;
+        }
     }
 
     .car-bottom {
