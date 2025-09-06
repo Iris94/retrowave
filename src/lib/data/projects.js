@@ -13,7 +13,7 @@ export const projects = [
         title: "Tetris",
         image: Tetris,
         description: "Tetris was my first project, written entirely in plain JavaScript without any frameworks. I love it because it challenged me to develop algorithms that are simple in style but complex in nature.",
-        link: "https://iris94.github.io/Tetris/",
+        link: "https://iris94.github.io/tetris-gameboy-edition/",
     },
     {
         title: "X-pravnik",
